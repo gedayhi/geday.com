@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geday | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="bg">
+        <nav-bar>
+            <div class="logo">
+                <a href="#"><img src="./img/logo.png"></a>
+            </div>
+            <div class="links">
+                
+                    <ul id="bar">
+                        <li class="fade" id="bar">
+                            <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i><br><div class="nav-links">Home</div></a>
+                        </li>
+                    <li class="fade" >
+                        <a href=""><i class="fa fa-play-circle" aria-hidden="true"></i><br><div class="nav-links">Videos</div></a>
+                    </li>
+                    <li class="fade" >
+                        <a href="courses.html"><i class="fa fa-book" aria-hidden="true"></i><br><div class="nav-links">Courses</div></a>
+                    </li>
+                    <li class="fade" >
+                        <a href=""> <i class="fa fa-id-badge" aria-hidden="true"></i><br><div class="nav-links">Blogs</div></a>
+                    </li>
+                    <li class="fade" >
+                        <a href=""> <i class="fa fa-comments" aria-hidden="true"></i><br><div class="nav-links">Contact</div></a>
+                    </li>
+                    <li class="user">
+                        <div class="dropdown">
+                            <button class="dropbtn"><i class="fa fa-user-circle" aria-hidden="true"></i></button>
+                            <br><div class="dropdown-content">
+                            <button class="dbutn" onclick="openFormSignin()"> <a href="#">Sign In</a></button><br> 
+                            <button class="dbutn" onclick="openFormSignup()"> <a href="#">Sign Up</a></button> 
+                            </div>
+                          </div>
+                    </li>
+                </ul>
+            </div>
+        </nav-bar><button class="bar" onclick="openNavLinks()"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        <tools>
+                 <div class="tools">
+                    <a href="#">Calculator</a>
+                 </div>       
+        </tools>
+        <div class="centr">
+           <h1>WELCOME TO</h1> 
+           <img src="./img/logo.png">
+        </div>
+    </section>
+    <section class="footer" style="height: 100px;">
+        <h3>@Copyright www.geday.com.np 2022</h3> 
+    </section>
+
+
+
+    <!-- A button to open the popup form -->
+<button class="open-button" onclick="openForm()">Open Contact Form</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <button type="button" class="btn cancel" onclick="closeForm()"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+    <h1>Feedback</h1>
+
+    <label for="email">Email</label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="Name">Name:</label>
+    <input type="text" placeholder="Enter your name" name="Name" required>
+    
+    <label for="Name">Subject:</label><br>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;"></textarea>
+    
+    <button type="submit" class="btn">Submit</button>
+      </form>
+</div>
+
+<!------- sign in form----> 
+
+<div class="form-popup-signin" id="myForm-signin">
+    <form action="/action_age.php" class="form-container">
+      <button type="button" class="btn cancel" onclick="closeFormSignin()"><i class="fa fa-times" aria-hidden="true"></i></button>
+  
+      <h1>Sign in</h1>
+  
+      <label for="email">Email</label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="password">Password:</label>
+      <input type="password" placeholder="Enter password" name="password" required>
+      <button type="submit" class="btn">Sign in</button>
+        </form>
+  </div>
+
+  <!----sign up formm-->
+  <div class="form-popup-signup" id="myForm-signup">
+    <form action="/action_age.php" class="form-container">
+      <button type="button" class="btn cancel" onclick="closeFormSignup()"><i class="fa fa-times" aria-hidden="true"></i></button>
+  
+      <h1>Sign Up</h1>
+      <label for="Name">Name:</label>
+      <input type="text" placeholder="Enter your name" name="Name" required>
+      
+      <label for="email">Email</label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="password">Password:</label>
+      <input type="password" placeholder="Enter password" name="password" required>
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+  
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+  
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+  
+      <div class="clearfix">
+        <button type="submit" class="btn">Sign Up</button>
+      <button type="submit" class="btn" onclick="closeFormSignup()" style="background-color: red;">Cancel</button>
+        </form>
+  </div>
+
+
+    <hr>
+
+    
+    <script>
+         function openFormSignin() {
+  document.getElementById("myForm-signin").style.display = "block";
+}
+function openFormSignup() {
+  document.getElementById("myForm-signup").style.display = "block";
+}
+        function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function closeFormSignin() {
+  document.getElementById("myForm-signin").style.display = "none";
+}
+
+function closeFormSignup() {
+  document.getElementById("myForm-signup").style.display = "none";
+}
+function openNavLinks(){
+  document.getElementById("bar").style.display = "block";
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    </script>
+</body>
+</html>
